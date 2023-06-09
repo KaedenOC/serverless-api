@@ -17,8 +17,8 @@ export const handler = async (event) => {
   const response = { statusCode: null, body: null, };
   try {
     let id = event?.pathParameters?.id;
-    let parsedBody = JSON.parse(event.body);
-    let result = await peopleModel.update({ id }, parsedBody);
+    // let parsedBody = JSON.parse(event.body);
+    let result = await peopleModel.delete(id);
     console.log('update by id', result);
     response.body = JSON.stringify(result);
     response.statusCode = 200;
@@ -29,7 +29,3 @@ export const handler = async (event) => {
 
   return response;
 };
-
-
-
-
