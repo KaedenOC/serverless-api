@@ -20,3 +20,4 @@
 - find handleCreate role and add permissions (AmazonDynamoDBFullAccess)
 - now to api gateway to the people route actions --> create method
 - click test and in the request body add in the new person (in json)
+- now to focus on getOne, go to api gateway to get, add resource, resource path = `{id}`
