@@ -16,8 +16,9 @@ export const handler = async (event) => {
 
   const response = { statusCode: null, body: null, };
   try {
-    let result = await peopleModel.scan().exec();
-    console.log('getAll', result);
+    let id = event.pathParameters.id;
+    let result = await peopleModel.scan('id').contains(id).exec();
+    console.log('get by id', result);
     response.body = JSON.stringify(result);
     response.statusCode = 200;
   } catch (error) {
