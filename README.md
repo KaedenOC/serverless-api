@@ -1,4 +1,20 @@
-# serverless-api
+# Lab 18
+
+## Project: serverless-api
+
+## Authors: Kaeden O'Meara
+
+## Problem Domain
+
+Create a serverless REST API.
+
+- Create a single resource REST API using a domain model of your choosing, constructed using AWS Cloud Services.
+- Database: DynamoDB, 1 table
+- Routing: API Gateway, GET, POST, PUT, DELETE
+- `/people`
+- `/people/id`
+
+## process
 
 - create dynamo table, and create item.
 - create api gateway choose REST API (public)
@@ -17,7 +33,20 @@
 - create a variable for our result from getall, await the model `peopleModel.scan().exec()` this is a true getAll
 - now to create our handleCreate lambda function
 - tether the lambda to api gateway and also add a role(IAM)
-- find handleCreate role and add permissions (AmazonDynamoDBFullAccess)
+- find handleCreate role and add permissions `AmazonDynamoDBFullAccess`
 - now to api gateway to the people route actions --> create method
 - click test and in the request body add in the new person (in json)
 - now to focus on getOne, go to api gateway to get, add resource, resource path = `{id}`
+
+TBC..
+
+## UML
+
+![UML 18](./assets/uml18.jpg)
+
+## Collaborators
+
+- Ike
+- Reece
+- Ryan E
+- Demo Code
